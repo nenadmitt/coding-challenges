@@ -34,7 +34,7 @@ public class Chess {
 
     public int simulate(String start, String end) {
         var minMoves = Integer.MAX_VALUE;
-        for (var i = 0; i < 150; i++) {
+        for (var i = 0; i < 100; i++) {
             var totalMoves = moves(start, end);
             if (totalMoves < minMoves) {
                 minMoves = totalMoves;
@@ -50,9 +50,10 @@ public class Chess {
         var currentPosition = startPoint;
         var counter = 0;
         var rand = new Random();
+
         while (!currentPosition.equals(endPoint)) {
 
-            var availableMoves = possibleMoves(currentPosition);
+            var availableMoves = possibleMoves(currentPosition, currentPosition);
             var randomMoveIndex = rand.nextInt(availableMoves.size());
             var currentMove = availableMoves.get(randomMoveIndex);
 
@@ -62,7 +63,7 @@ public class Chess {
         return counter;
     }
 
-    private List<Point> possibleMoves(Point current) {
+    private List<Point> possibleMoves(Point current, Point previousPosition) {
 
         var leftPointUp = new Point(current.x - 2, current.y - 1);
         var leftPointDown = new Point(current.x - 2, current.y + 1);
@@ -78,13 +79,13 @@ public class Chess {
 
         return Stream
                 .of(leftPointUp, leftPointDown, rightPointDown, rightPointUp, upPointRight, upPointLeft, downPointRight, downPointLeft)
-                .filter(this::canMove)
+                .filter(i -> canMove(i) && !i.equals(previousPosition))
                 .collect(Collectors.toList());
     }
 
     private boolean canMove(Point knight) {
         int TABLE_SIZE = 8;
-        return knight.x >= 0 && knight.x <= TABLE_SIZE && knight.y >= 0 && knight.y < TABLE_SIZE;
+        return knight.x >= 0 && knight.x < TABLE_SIZE && knight.y >= 0 && knight.y < TABLE_SIZE;
     }
 
     private Point getFromString(String position) {

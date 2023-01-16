@@ -1,7 +1,5 @@
 package org.example.escape_maze;
 
-import org.example.EscapeMaze;
-
 import java.util.Objects;
 
 public class PlayerPosition {

@@ -2,6 +2,8 @@ package org.example;
 
 import java.util.*;
 
+//https://www.codewars.com/kata/52bb6539a4cf1b12d90005b7
+//Difficulty: 3kyu
 public class BattleField {
 
     class Point{
@@ -23,14 +25,6 @@ public class BattleField {
         @Override
         public int hashCode() {
             return Objects.hash(x, y);
-        }
-
-        @Override
-        public String toString() {
-            return "Point{" +
-                    "x=" + x +
-                    ", y=" + y +
-                    '}';
         }
     }
     private final int[][] fields;
@@ -54,7 +48,7 @@ public class BattleField {
 
     public boolean verify() {
 
-        var expectedSpaces = 1 * 4 + 2 * 3 + 3 * 2 + 4 * 1;
+        var expectedSpaces = 20;
         var takenSpaces = 0;
         for (var i = 0; i < FIELD_SIZE; i++) {
             for (var j = 0; j < FIELD_SIZE;j ++) {
@@ -64,18 +58,14 @@ public class BattleField {
             }
         }
 
-//        if (expectedSpaces != takenSpaces) {
-//            return false;
-//        }
+        if (expectedSpaces != takenSpaces) {
+            return false;
+        }
 
         var battleShipCount = checkHorizontal(4) + checkVertical(4);
-        System.out.println(battleShipCount + " battleship");
         var destroyerCount = checkHorizontal(3) + checkVertical(3);
-        System.out.println(destroyerCount + " cruiser");
         var cruiserCount = checkHorizontal(2) + checkVertical(2);
-        System.out.println(cruiserCount + " desctroyer");
         var submarineCount = checkHorizontal(1);
-        System.out.println(submarineCount + " submarine");
         return battleShipCount == 1 && destroyerCount == 2 && cruiserCount == 3 && submarineCount == 4;
     }
 
@@ -97,8 +87,6 @@ public class BattleField {
                 }
 
                 if (isTaken && sequenceStarted) {
-                    System.out.println("adding sequence");
-                    System.out.println(new Point(y, x));
                     sequence++;
                     pointList.addLast(new Point(y, x));
                 }
@@ -106,7 +94,6 @@ public class BattleField {
                 if (sequenceStarted && (isFree || isLastElement)) {
                     if (sequence == shipLength) {
                         if (verifyNoAdjustmentSpaces(pointList)) {
-                            System.out.println("adding ship x:" + x + " y:" + y);
                             validShipCount++;
                         }
                     }

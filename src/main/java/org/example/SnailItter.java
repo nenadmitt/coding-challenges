@@ -1,5 +1,7 @@
 package org.example;
 
+//https://www.codewars.com/kata/521c2db8ddc89b9b7a0000c1
+//Difficulty: 4kyu
 public class SnailItter {
 
     public static int[] snail(int[][] arr) {

@@ -1,9 +1,10 @@
 package org.example;
 
 import java.util.*;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+//https://www.codewars.com/kata/56bb9b7838dd34d7d8001b3c
+// Difficulty 4kyu
 public class Maze {
 
     static class Point {
@@ -28,13 +29,6 @@ public class Maze {
             return Objects.hash(x, y);
         }
 
-        @Override
-        public String toString() {
-            return "Point{" +
-                    "x=" + x +
-                    ", y=" + y +
-                    '}';
-        }
     }
 
     private final char[][] maze;
@@ -75,14 +69,9 @@ public class Maze {
     public boolean canExit() {
 
         Map<Point, Boolean> playedPositions = new HashMap<>();
-        var positionWithMultipleOptions = new Point(startingPosition.x, startingPosition.y);
         List<Point> multipleChoicePositions = new ArrayList<>();
         var currentPosition = new Point(startingPosition.x, startingPosition.y);
         var totalFreeSpace = totalFreeSpaces() + 1; // +1 for player;
-        var stuck = false;
-
-        System.out.println(totalFreeSpace + " free space");
-        List<Point> moves = new ArrayList<>();
 
         while (true) {
 

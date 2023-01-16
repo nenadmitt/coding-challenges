@@ -3,8 +3,9 @@ package org.example;
 import java.util.HashSet;
 import java.util.Set;
 
+//https://www.codewars.com/kata/529bf0e9bdf7657179000008
+// Difficulty: 4kyu?
 public class Sudoku {
-
 
     public boolean check(int[][] arr) {
        return isValidCube(arr) && isValidVertical(arr) && isValidHorizontal(arr);

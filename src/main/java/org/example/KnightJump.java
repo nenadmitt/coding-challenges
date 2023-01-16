@@ -70,6 +70,6 @@ public class KnightJump {
     }
 
     private boolean canMove(Move v) {
-        return v.x > 0 && v.x < 9 && v.y > 0 && v.y < 9;
+        return v.x >= 0 && v.x < 9 && v.y >= 0 && v.y < 9;
     }
 }

@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ceb29c47-ddaf-4986-84bf-19d2b8e07a65" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AssemblerInterpreter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ColoredTriangles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/KnightJump.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/SimpleAssembler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BattleField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BattleField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Chess.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/EscapeMaze.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FizzBuzzChallenge.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SkyScrapers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Sudoku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Sudoku.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/escape_maze/EscapeMazeGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/escape_maze/EscapeMazeGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/escape_maze/PlayerPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/escape_maze/PlayerPosition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FizzBuzzTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FizzBuzzTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
